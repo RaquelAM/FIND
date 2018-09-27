@@ -1,16 +1,68 @@
+@font-face {
+      font-family: 'findicons';
+      src: url('./font/findicons.eot?4914503');
+      src: url('./font/findicons.eot?4914503#iefix') format('embedded-opentype'),
+           url('./font/findicons.woff?4914503') format('woff'),
+           url('./font/findicons.ttf?4914503') format('truetype'),
+           url('./font/findicons.svg?4914503#findicons') format('svg');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+
+    .demo-icon
+    {
+      font-family: "findicons";
+      font-style: normal;
+      font-weight: normal;
+      speak: none;
+
+      display: inline-block;
+      text-decoration: inherit;
+      width: 1em;
+      margin-right: .2em;
+      text-align: center;
+      /* opacity: .8; */
+
+      /* For safety - reset parent styles, that can break glyph codes*/
+      font-variant: normal;
+      text-transform: none;
+
+      /* fix buttons height, for twitter bootstrap */
+      line-height: 1em;
+
+      /* Animation center compensation - margins should be symmetric */
+      /* remove if not needed */
+      margin-left: .2em;
+
+      /* You can be more comfortable with increased icons size */
+      /* font-size: 120%; */
+
+      /* Font smoothing. That was taken from TWBS */
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+
+      /* Uncomment for 3D effect */
+      /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+    }
 .mb-0{margin-bottom: 0;}
 .uppercase{text-transform: uppercase;}
 header nav{background-color: #aad509 !important;}
 header nav .navbar-nav > li > a{color: white !important;}
 body{color: #1946bb !important}
 .bkgnd-green{background-color: #aad509 !important;}
+.bkgnd-green-t{background-image: url('../images/find/bg-verde-slider.png') !important;}
 .bkgnd-blue{background-color: #1946bb !important;}
+.bkgnd-blue-t{background-image: url('../images/find/bg-azul.png') !important;}
 .white{color: white !important;}
 .green{color: #aad509 !important;}
 .blue{color: #1946bb !important;}
+.fw-l{font-weight: lighter !important;}
+.fw-b{font-weight: bold !important;}
 .feature-box-9:hover i{color: #1946bb !important;}
 .feature-box-9:hover p{color: #aad509 !important;}
 .text-big{font-size: 20px;}
+.fs-15{font-size: 15px !important;}
 .mt-30{margin-top: 30px;}
 .btn.btn-deep-blue {
     background: #1946bb;
