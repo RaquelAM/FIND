@@ -26,3 +26,10 @@ body{color: #1946bb !important}
   font-size: 12px !important;
   padding: 25px 28px 0px !important;
 }
+.p-30{
+  padding: 30px;
+}
+.slider-typography{
+  width: fit-content !important;
+  margin: auto;
+}
