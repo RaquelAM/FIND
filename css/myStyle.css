@@ -64,6 +64,7 @@ body{color: #1946bb !important}
 .text-big{font-size: 20px;}
 .fs-15{font-size: 15px !important;}
 .mt-30{margin-top: 30px;}
+.mb-30{margin-bottom: 30px;}
 .btn.btn-deep-blue {
     background: #1946bb;
     border-color: #1946bb;
@@ -84,4 +85,14 @@ body{color: #1946bb !important}
 .slider-typography{
   width: fit-content !important;
   margin: auto;
+}
+header a.logo img{
+  max-height: 50px !important;
+}
+.input-file{background: white; color: #737373;height: 40px;position: relative;text-align: left;padding: 8px 0 0 18px;margin: 0 0 20px 0;}
+.input-file .btn{
+  position: absolute;
+  top: 0;
+  right: 0;
+  box-shadow: 2px 2px 2px 2px grey;
 }
