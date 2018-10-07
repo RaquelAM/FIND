@@ -38,7 +38,7 @@ $mail_caract = "/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{
 
 	$mail = new PHPMailer;
 	$mail->setFrom($email, '');
-	$mail->addAddress('empleo@find.com', '');
+	$mail->addAddress('empleo@finddevelopingtalent.com', '');
 	$mail->Subject  = 'Te han contactado desde find.com';
 	$mail->isHTML(true);
 	$mail->Body     = "<table width='100%' border='0'  >

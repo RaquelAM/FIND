@@ -95,6 +95,9 @@ header a.logo img{
   top: 0;
   right: 0;
   box-shadow: 2px 2px 2px 2px grey;
+  font-size: 10px;
+  padding: 5px;
+  line-height: 25px;
 }
 #FIND p {
     margin: 0 0 13px;
@@ -156,3 +159,4 @@ header a.logo img{
   #popupContainer textarea{height: 40px;}
 }
 .parallax{background-position: center !important;}
+nav.navbar.bootsnav .navbar-nav{background-color: #aad509 !important;}
