@@ -290,9 +290,9 @@ function fullScreenHeight() {
     element.parents('section').imagesLoaded(function () {
         if ($(".top-space .full-screen").length > 0) {
             var $headerheight = $("header nav.navbar").outerHeight();
-            $(".top-space .full-screen").css('min-height', $minheight - $headerheight);
+            //$(".top-space .full-screen").css('min-height', $minheight );
         } else {
-            element.css('min-height', $minheight);
+            //element.css('min-height', $minheight);
         }
     });
 
@@ -1597,7 +1597,7 @@ $(document).ready(function () {
     });
 
     /*==============================================================
-     mega menu width 
+     mega menu width
      ===============================================================*/
     $("ul.mega-menu-full").each(function (idx, elm) {
         var megaMenuWidth = 0;
@@ -1979,7 +1979,7 @@ $(document).ready(function () {
     });
 
     /*==============================================================*/
-    //    hamburger menu 
+    //    hamburger menu
     /*==============================================================*/
     $(document).on('click', '.btn-hamburger', function () {
         $('.hamburger-menu').toggleClass('show-menu');
@@ -2123,7 +2123,7 @@ $(document).ready(function () {
      ==============================================================*/
 
     /*==============================================================*/
-    //revolution Start 
+    //revolution Start
     /*==============================================================*/
     /* ================================
      home-creative-studio
@@ -2363,11 +2363,11 @@ $(document).ready(function () {
         });
     }
     /*==============================================================*/
-    //revolution End 
+    //revolution End
     /*==============================================================*/
 
     /*==============================================================*/
-    //magnificPopup Start 
+    //magnificPopup Start
     /*==============================================================*/
     $('.header-search-form').magnificPopup({
         mainClass: 'mfp-fade',
@@ -2413,7 +2413,7 @@ $(document).ready(function () {
     });
 
     /*==============================================================*/
-    //magnificPopup End 
+    //magnificPopup End
     /*==============================================================*/
     $("input.search-input").on("keypress", function (event) {
         if (event.which == 13 && !isMobile) {
@@ -2723,3 +2723,75 @@ $(window).load(function () {
 /* ===================================
  END Page Load
  ====================================== */
+
+
+ /* ===================================
+  Enviar CV
+  ====================================== */
+  $(document).on('click','.cv', function(e){
+
+            e.preventDefault();
+
+            console.log($(".cv").closest("form"))
+   $.ajax({
+        // Your server script to process the upload
+        url: 'enviarcv.php',
+        type: 'POST',
+
+        // Form data
+        data: new FormData($(this).closest("form")[0]),
+
+
+        // Tell jQuery not to process data or worry about content-type
+        // You *must* include these options!
+        cache: false,
+        contentType: false,
+        processData: false,
+
+
+    success: function(msj){
+    console.log(msj);
+
+      if(msj == 0){
+          $('.mensajes-form').html('Gracias tus datos se han enviado correctamente.');
+          $("form").trigger('reset');
+          setTimeout(function(){
+            $('.mensajes-form').html("");
+          },4000);
+      }else if (msj == 1){
+          $('.mensajes-form').html('Completa todos los campos requeridos.');
+
+          setTimeout(function(){
+            $('.mensajes-form').html("");
+          },4000);
+      }else if (msj == 2){
+
+          $('.mensajes-form').html('Ingresa una direccion de email correcta.');
+          setTimeout(function(){
+            $('.mensajes-form').html("");
+          },4000);
+      }else {
+
+
+          $('.mensajes-form').html('Adjunta un archivo, puede ser .doc o .pdf');
+          setTimeout(function(){
+            $('.mensajes-form').html("");
+          },4000);
+      }
+
+    }
+  });
+
+});
+/*==========================================================================
+        POPUP FORM
+    ==========================================================================*/
+		
+    $(document).on("click",".popup", function(){
+      console.log("gsgsd")
+			$("#popupContainer").fadeIn()
+		})
+    $(document).on("click",".cerrar", function(){
+      console.log("gsgsd")
+			$("#popupContainer").fadeOut()
+		})

@@ -96,3 +96,62 @@ header a.logo img{
   right: 0;
   box-shadow: 2px 2px 2px 2px grey;
 }
+#FIND p {
+    margin: 0 0 13px;
+}
+#FIND h5{margin: 0 0 15px;}
+.montserrat{font-family: 'Montserrat', sans-serif;}
+.footer-logo {
+    max-height: 45px;
+}
+#popupContainer{
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #0000008f;
+	display: none;
+  z-index: 99999;
+}
+#popupContainer .contact-form{
+	position: fixed;
+  display: table;
+  width: 100%;
+  height: 100%;
+	padding: calc(50vh - 200px) calc(50vw - 270px);
+}
+.containerpop{
+	width: 500px;
+	display: table-cell;
+	vertical-align: middle;
+	background: white;
+	padding: 25px;
+	position: relative;
+}
+.cerrar{
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	font-size: 20px;
+	color: black;
+	cursor: pointer;
+}
+#popupContainer .form-control{margin-bottom: 25px;}
+#popupContainer textarea{height: 100px;}
+#popupContainer .theme-btn-s4{background-color: black; color: white;}
+@media (max-width: 800px) {
+  #popupContainer .contact-form{padding: 40px calc(50vw - 270px);}
+}
+@media (max-width: 400px) {
+  #popupContainer .contact-form{padding: 40px 20px; }
+}
+@media (max-width: 400px) {
+  #popupContainer .contact-form{padding: 5px; }
+  #popupContainer input, #popupContainer textarea, #popupContainer select{
+    margin: 0 0 10px 0;
+  }
+  #popupContainer textarea{height: 40px;}
+}
